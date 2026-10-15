@@ -245,3 +245,14 @@ footer{
   .intro h1{ font-size: 30px; }
   .stats{ flex-direction: column; }
 }
+
+.tips{
+  list-style: none;         
+}
+.tips li{
+  background: var(--box);    
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
