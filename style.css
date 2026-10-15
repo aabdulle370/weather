@@ -1,0 +1,247 @@
+:root{
+  --card: rgba(24, 31, 46, 0.92);   
+  --box: #0F1624;                   
+  --text: #FFFFFF;
+  --muted: #9AA4B5;
+  --severe: #7F1D1D;                
+  --warning: #7C3A12;               
+  --watch: #6B4E10;                
+  --safe: #34D399;                  
+}
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: sans-serif;
+  color: var(--text);
+  line-height: 1.5;
+  min-height: 100vh;
+  background-attachment: fixed;     
+}
+
+
+.bg-clear { background: linear-gradient(180deg, #1E6FD9, #5AA9F0); }   
+.bg-cloudy{ background: linear-gradient(180deg, #4B5D78, #8697B0); }   
+.bg-rain  { background: linear-gradient(180deg, #25324A, #4A5C78); }   
+.bg-snow  { background: linear-gradient(180deg, #7C8CA6, #D5DEEA); }   
+.bg-storm { background: linear-gradient(180deg, #151B2E, #3A2F5B); }   
+
+
+.top{
+  padding: 18px 24px;
+}
+.brand{
+  font-weight: bold;
+  font-size: 18px;
+}
+
+main{
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px 40px 20px;
+}
+
+
+.intro{
+  text-align: center;
+  padding: 20px 0 30px 0;
+}
+.intro h1{
+  font-size: 40px;
+}
+.subtitle{
+  margin-top: 6px;
+  opacity: 0.9;
+}
+
+
+.search{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 520px;
+  margin: 22px auto 0 auto;
+  background: var(--card);
+  border-radius: 100px;
+  padding: 6px 6px 6px 18px;
+}
+.search input{
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-size: 15px;
+  outline: none;
+  min-width: 0;
+}
+.search button{
+  border: none;
+  border-radius: 100px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.detect{
+  background: #3B63E8;
+  color: white;
+}
+.check{
+  background: #FFB020;
+  color: black;
+}
+
+.status{
+  margin-top: 10px;
+  font-size: 14px;
+  min-height: 20px;
+}
+
+
+.card{
+  background: var(--card);
+  border-radius: 12px;
+  padding: 22px;
+  margin-bottom: 24px;
+}
+.card h2{
+  font-size: 20px;
+}
+.card-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.place{
+  color: var(--muted);
+  margin: 4px 0 16px 0;
+}
+
+
+.live{
+  font-size: 12px;
+  color: var(--muted);
+}
+.dot{
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--safe);
+  margin-right: 4px;
+}
+
+
+.stats{
+  display: flex;
+  gap: 14px;
+}
+.stat{
+  flex: 1;
+  background: var(--box);
+  border-radius: 10px;
+  padding: 18px 8px;
+  text-align: center;
+}
+.num{
+  display: block;
+  font-size: 30px;
+  font-weight: bold;
+}
+.label{
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+
+.alert{
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+.alert.severe { background: var(--severe); }
+.alert.warning{ background: var(--warning); }
+.alert.watch  { background: var(--watch); }
+
+.alert-top{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.alert-title{
+  font-weight: bold;
+  font-size: 17px;
+}
+.alert-place{
+  font-size: 13px;
+  opacity: 0.8;
+}
+.when{
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 100px;
+  padding: 4px 12px;
+  font-size: 12px;
+  height: fit-content;
+  white-space: nowrap;
+}
+.alert-text{
+  margin-top: 10px;
+  font-size: 14px;
+}
+.tags{
+  margin-top: 12px;
+}
+.tag{
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 100px;
+  padding: 2px 10px;
+  font-size: 11px;
+  margin-right: 6px;
+}
+
+
+.allclear{
+  text-align: center;
+  padding: 30px 10px;
+}
+.check-circle{
+  width: 56px;
+  height: 56px;
+  line-height: 56px;
+  margin: 0 auto 10px auto;
+  border-radius: 50%;
+  background: rgba(52, 211, 153, 0.2);
+  color: var(--safe);
+  font-size: 28px;
+}
+.allclear p{
+  color: var(--muted);
+  font-size: 14px;
+}
+.empty{
+  color: var(--muted);
+  text-align: center;
+  padding: 20px;
+}
+
+footer{
+  color: white;
+  opacity: 0.8;
+  font-size: 12px;
+  text-align: center;
+  padding: 20px;
+}
+
+
+@media (max-width: 600px){
+  .intro h1{ font-size: 30px; }
+  .stats{ flex-direction: column; }
+}

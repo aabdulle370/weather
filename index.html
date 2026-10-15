@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>⚠️ Extreme Weather Alert</title>
+
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+
+<body class="bg-clear">
+
+
+<header class="top">
+  <div class="brand">⚠️ Extreme Weather Alert</div>
+</header>
+
+<main>
+
+  
+  <section class="intro">
+    <h1>Stay Safe. Stay Informed.</h1>
+    <p class="subtitle">Real-time extreme weather alerts for your location</p>
+
+    
+    <form class="search" id="searchForm">
+      <input type="text" id="cityInput" placeholder="Enter a city (e.g. Toronto)" autocomplete="off">
+      <button type="button" id="locateBtn" class="detect">📍 Detect</button>
+      <button type="submit" class="check">Check</button>
+    </form>
+
+  
+    <p class="status" id="statusLine"></p>
+  </section>
+
+  
+  <section class="card">
+    <h2>🌡️ Current Conditions</h2>
+    <p class="place" id="placeName">Search a city to see the weather</p>
+
+    <div class="stats">
+      <div class="stat">
+        <span class="num" id="tempValue">--</span>
+        <span class="label">Temperature</span>
+      </div>
+      <div class="stat">
+        <span class="num" id="humidityValue">--</span>
+        <span class="label">Humidity</span>
+      </div>
+      <div class="stat">
+        <span class="num" id="windValue">--</span>
+        <span class="label">Wind Speed</span>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="card">
+    <div class="card-head">
+      <h2>🔔 Active Alerts</h2>
+      <span class="live"><span class="dot"></span> Live Updates</span>
+    </div>
+
+  
+    <div id="alertList">
+      <div class="empty">Search a city to see alerts</div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Forecast data from Open-Meteo (open-meteo.com). Alert thresholds are a simplified model built for
+  this project, not an official government warning system. Always follow guidance from your local
+  weather authority for real emergencies.
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
